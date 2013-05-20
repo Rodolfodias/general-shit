@@ -17,7 +17,7 @@ do
                         echo "ENTRADA DESAPARECIDA"
                         echo -e $line >> desactivados.txt                               # regista os domínios desactivados num ficheiro
                 else
-                        echo -e $line >> expiracao.txt                                  # teste
+                        echo -e $line >> expiracao.txt
                         echo "${bindResult}" | grep -i "Name Server\|NameServer\|nserver"
                         echo "${bindResult}" | grep -i "Data de registo\|Creation Date\|created" | head -1
                         echo "${bindResult}" | grep -i "Data de Expiração\|Expiration Date\|expires" | head -1 | tee -a expiracao.txt           
